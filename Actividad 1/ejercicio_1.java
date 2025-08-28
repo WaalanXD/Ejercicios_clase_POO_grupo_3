@@ -1,5 +1,5 @@
 import java.util.Scanner;
-class ejercicio_1 {
+public class ejercicio_1 {
     public static void main(String[] args) {
         
     // Nombre de ejercicio: Ejercicio resuelto No 4
