@@ -29,5 +29,3 @@ public class ejercicio_5 {
 
 }
 
-git config --global user.name "Waalan"
-git config --global user.email "kennydanieldiaz@gmail.com"
