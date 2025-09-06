@@ -7,22 +7,24 @@ public class ejercicio_1 {
     System.out.println("Ingrese la edad de Juan: ");
     int edadJuan = input.nextInt();
     
-    Funciones.EvaluacionesEdad(edadJuan);
     
-    int edadAlberto = Funciones.CalcularEdadAlberto(edadJuan);
+    int edadAlberto = Calculos.calcularEdadAlberto(edadJuan);
     
-    int edadAna = Funciones.CalcularEdadAna(edadJuan);
+    int edadAna = Calculos.calcularEdadAna(edadJuan);
     
-    int edadMama = Funciones.CalcularEdadMama(edadJuan,edadAlberto, edadAna);
+    int edadMama = Calculos.calcularEdadMama(edadJuan,edadAlberto, edadAna);
     
-    System.out.println("Las edades son:")
+    input.close();
+    System.out.println("Las edades son: ");
     System.out.println("Alberto: " + edadAlberto);
-    System.out.println("Juan: ") + edadJuan;
-    System.out.println("Ana: ") + edadAna;
-    System.out.println("Mama: ") + edadMama;
+    System.out.println("Juan: " + edadJuan);
+    System.out.println("Ana: " + edadAna);
+    System.out.println("Mama: " + edadMama);
     
     
     
     
     
+}
+
 }
