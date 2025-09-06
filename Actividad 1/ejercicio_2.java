@@ -3,10 +3,28 @@
 import java.util.Scanner;
 public class ejercicio_2 {
     
+    public static void main(String[] args) {
+      
+        
+    double x,y,suma;
 
-    double suma = 0;
+    Scanner input = new Scanner(System.in);
 
-    double x = 20;
+    System.out.println("Ingrese un valor para x: ");
+    x = input.nextDouble();
+
+    System.out.println("Ingrese un valor para y: ");
+    y = input.nextDouble();
+
+    System.out.println("Ingrese un valor para suma: ");
+    suma = input.nextDouble();
+
+
+
+
+
+
+    }
 
     
 }
