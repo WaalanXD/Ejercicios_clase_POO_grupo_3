@@ -5,14 +5,14 @@ public class ejercicio_1 {
     // Nombre de ejercicio: Ejercicio resuelto No 4
     Scanner input = new Scanner(System.in);
     System.out.println("Ingrese la edad de Juan: ");
-    int edadJuan = input.nextInt();
+    double edadJuan = input.nextDouble();
     
     
-    int edadAlberto = Calculos.calcularEdadAlberto(edadJuan);
+    double edadAlberto = Calculos.calcularEdadAlberto(edadJuan);
     
-    int edadAna = Calculos.calcularEdadAna(edadJuan);
+    double edadAna = Calculos.calcularEdadAna(edadJuan);
     
-    int edadMama = Calculos.calcularEdadMama(edadJuan,edadAlberto, edadAna);
+    double edadMama = Calculos.calcularEdadMama(edadJuan,edadAlberto, edadAna);
     
     input.close();
     System.out.println("Las edades son: ");

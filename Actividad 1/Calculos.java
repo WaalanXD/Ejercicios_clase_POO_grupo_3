@@ -4,27 +4,21 @@ public class Calculos {
     
     
 
-    static int calcularEdadAlberto(int edadJuan) {
 
-
-        int edadAlberto = edadJuan * 2/3;
-
+    static double calcularEdadAlberto(double edadJuan) {
+        double edadAlberto = edadJuan * 2.0 / 3.0;
         return edadAlberto;
     }
 
-    static int calcularEdadAna(int edadJuan) {
 
-
-        int edadAna = edadJuan * 4/3;
-
+    static double calcularEdadAna(double edadJuan) {
+        double edadAna = edadJuan * 4.0 / 3.0;
         return edadAna;
     }
 
-    static int calcularEdadMama(int edadJuan, int edadAlberto, int edadAna) {
 
-
-        int edadMama = edadJuan + edadAlberto + edadAna;
-
+    static double calcularEdadMama(double edadJuan, double edadAlberto, double edadAna) {
+        double edadMama = edadJuan + edadAlberto + edadAna;
         return edadMama;
     }
 
