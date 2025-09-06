@@ -1,4 +1,4 @@
-// EJERCICIO PROPUESTO 17 3
+// EJERCICIO PROPUESTO 17 Libro
 
 import java.util.Scanner;
 
