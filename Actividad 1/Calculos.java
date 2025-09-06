@@ -22,6 +22,23 @@ public class Calculos {
         return edadMama;
     }
 
+    static double calcularSuma(double suma, double x) {
+
+        double resultado = suma + x;
+
+        return resultado;
+    }
+
+    static double calcularX(double x, double y) {
+
+
+        double resultado = x + Math.pow(y,2);
+
+        return resultado;
+
+    }
+
+
 }
 
     /* static double calcularLongitud(double radio) {

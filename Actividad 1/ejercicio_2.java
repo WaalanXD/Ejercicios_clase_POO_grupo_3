@@ -20,6 +20,28 @@ public class ejercicio_2 {
     suma = input.nextDouble();
 
 
+    input.close();
+
+
+    suma = Calculos.calcularSuma(suma, x);
+
+
+    x = Calculos.calcularX(x, y);
+
+    suma = suma + (x/y);
+
+
+    System.out.println("El valor de la suma es: " + suma);
+
+
+
+
+
+
+
+
+
+
 
 
 
