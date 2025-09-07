@@ -62,6 +62,25 @@ public class Calculos {
     }
 
 
+    //Funciones ejercicio 4:
+
+
+    static double calcularCuadrado(double numero) {
+
+        double resultado = Math.pow(numero, 2); 
+
+        return resultado;
+    }
+
+    static double calcularCubo(double numero) {
+
+        double resultado = Math.pow(numero, 3); 
+
+        return resultado;
+    }
+    
+
+
 }
 
     /* static double calcularLongitud(double radio) {
