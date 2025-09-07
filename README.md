@@ -1,2 +1,4 @@
 # Ejercicios_clase
-Ejercicios evaluativos de clase
+
+
+AQUI ESTARAN LOS EJERCICIOS DEL TALLER ! PARA EL GRUPO # CLASE POO
