@@ -30,7 +30,7 @@ public class ejercicio_3 {
         porcentaje_retencion = Calculos.calcularPorcentajeRetencion(retencion);
 
 
-        retencion_fuente = Calculos.calcularSalarioNeto(salario_bruto, porcentaje_retencion);
+        retencion_fuente = Calculos.calcularRetencionFuente(salario_bruto, porcentaje_retencion);
 
         salario_neto = Calculos.calcularSalarioNeto(salario_bruto, retencion_fuente);
 
