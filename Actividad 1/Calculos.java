@@ -1,9 +1,31 @@
-
+   
 
 public class Calculos {
     
-    
 
+
+     // Funciones para ejercicio 3
+    static double calcularSalarioBruto(double horas, double valorHora) {
+        double resultado = horas * valorHora;
+        return resultado;
+    }
+
+    static double calcularPorcentajeRetencion(double porcentaje) {
+        double resultado = porcentaje / 100;
+        return resultado;
+    }
+
+    static double calcularRetencionFuente(double salarioBruto, double porcentajeRetencion) {
+        double resultado = salarioBruto * porcentajeRetencion;
+        return resultado;
+    }
+
+    static double calcularSalarioNeto(double salarioBruto, double retencionFuente) {
+        double resultado = salarioBruto - retencionFuente;
+        return resultado;
+    }
+
+    //Funciones ejercicio 1
 
     static double calcularEdadAlberto(double edadJuan) {
         double edadAlberto = edadJuan * 2.0 / 3.0;
@@ -22,6 +44,7 @@ public class Calculos {
         return edadMama;
     }
 
+    //Funciones ejercicio 2
     static double calcularSuma(double suma, double x) {
 
         double resultado = suma + x;
