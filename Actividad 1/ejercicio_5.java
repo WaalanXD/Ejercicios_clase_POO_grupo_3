@@ -12,7 +12,7 @@ public class ejercicio_5 {
         Scanner input = new Scanner(System.in);
 
 
-        System.out.println("Ingrese el numero del radio");
+        System.out.println("Ingrese el numero correspondiente al valor del radio: ");
 
         radio = input.nextDouble();
 
@@ -21,7 +21,7 @@ public class ejercicio_5 {
 
         areaCirculo = Calculos.calcularArea(radio);
 
-        System.out.println("La longitud del Circulo es: " + longitudCircunferencia);
+        System.out.println("La longitud de la circunferencia es: " + longitudCircunferencia);
 
         System.out.println("El area del circulo es: " + areaCirculo);
         

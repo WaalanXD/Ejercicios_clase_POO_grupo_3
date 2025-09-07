@@ -79,22 +79,24 @@ public class Calculos {
         return resultado;
     }
     
+    
+     static double calcularLongitud(double radio) {
 
+        double resultado = 2 * Math.PI * radio;
 
-}
-
-    /* static double calcularLongitud(double radio) {
-
+        return resultado;
 
     }
 
 
     static double calcularArea(double radio) {
 
+        double resultado = Math.PI * Math.pow(radio, 2);
+
+        return resultado;
 
         
     }
-    
-}
 
-*/
+
+}
