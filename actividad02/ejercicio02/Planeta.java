@@ -11,7 +11,7 @@ public class Planeta {
     tipoPlaneta tipo = null;
     
     
-    Planeta(String nombre, int cantidadSatelites, double masa, double volumen, int diametro, int distanciaSol, tipoPlaneta tipo, boolean esObservable) {
+    public Planeta(String nombre, int cantidadSatelites, double masa, double volumen, int diametro, int distanciaSol, tipoPlaneta tipo, boolean esObservable) {
         
         this.nombre = nombre;
         this.cantidadSatelites = cantidadSatelites;
@@ -59,6 +59,7 @@ public class Planeta {
     
 
 }
+
 
 
 
