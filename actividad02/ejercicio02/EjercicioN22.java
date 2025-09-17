@@ -30,7 +30,7 @@ public class Planeta {
         this.tipo = tipo;
         this.esOberservable = esObersevable;
         
-    
+    }
     void imprimir() {
         
         System.out.println(“Nombre del planeta = “ + nombre);
@@ -43,7 +43,7 @@ public class Planeta {
     System.out.println(“Es observable = “ + esObservable);
     }
         
-    }
+    
 
 }
 
