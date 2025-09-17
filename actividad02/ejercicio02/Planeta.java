@@ -20,7 +20,7 @@ public class Planeta {
         this.diametro = diametro;
         this.distanciaSol = distanciaSol;
         this.tipo = tipo;
-        this.esOberservable = esObersevable;
+        this.esObservable = esObservable;
         
     }
     void imprimir() {
@@ -59,5 +59,6 @@ public class Planeta {
     
 
 }
+
 
 
