@@ -1,6 +1,6 @@
 package actividad02.ejercicio02;
 
-class EjercicioN22 {
+public class EjercicioN22 {
     public static void main(String[] args) {
         
         Planeta p1 = new Planeta("Tierra",1,5.9736E24,1.08321E12,12742,150000000,tipoPlaneta.TERRESTRE,true);
