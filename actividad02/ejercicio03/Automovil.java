@@ -101,4 +101,13 @@ public class Automovil {
         }
     }
 
+    void desacelerar(int decremento) {
+
+        if (velocidadActual - decremento >= 0) {
+            velocidadActual -= decremento;
+        } else {
+            System.out.println("No se puede decrementar a una velocidad negativa");
+        }
+    }
+
 }
