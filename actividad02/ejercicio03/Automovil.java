@@ -92,4 +92,13 @@ public class Automovil {
         }
     }
 
+    void acelerar(int incremento) {
+
+        if (velocidadActual + incremento <= velocidadMaxima) {
+            velocidadActual += incremento;
+        } else {
+            System.out.println("No se puede incrementar a una velocidad superior a la máxima del automóvil.");
+        }
+    }
+
 }
