@@ -105,7 +105,8 @@ public class Automovil {
         if (velocidadActual - decremento >= 0) {
             velocidadActual -= decremento;
         } else {
-            System.out.println("\nNo se puede decrementar a una velocidad negativa\n");
+            System.out.println("\nNo se pudo decrementar" + decremento + "a " + velocidadActual);
+            System.out.println("debido a que la velocidad no puede ser negativa.\n");
         }
     }
 
@@ -137,7 +138,7 @@ public class Automovil {
         System.out.println("Número de puertas: " + puertas);
         System.out.println("Cantidad de Asientos: " + cantidadAsientos);
         System.out.println("Velocidad Máxima: " + velocidadMaxima + " km/h");
-        System.out.println("Velocidad Actual: " + velocidadActual + " km/h\n");
-        System.out.println("Color: " + color);
+        System.out.println("Velocidad Actual: " + velocidadActual + " km/h");
+        System.out.println("Color: " + color + "\n");
     }   
 }
