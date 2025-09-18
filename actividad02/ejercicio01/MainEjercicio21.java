@@ -1,7 +1,7 @@
 package actividad02.ejercicio01;
 import java.util.Scanner;
 public class MainEjercicio21 {
-
+//comentario: es un poco diferente al del libro porque estaba practicando arrays, perdon.
     public static void main(String[] args) {
 
         Scanner input = new Scanner(System.in);
