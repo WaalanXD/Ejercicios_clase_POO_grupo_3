@@ -3,8 +3,8 @@ package actividad02.ejercicio03;
 public class EjercicioN23 {
 
     public static void main(String[] args) {
-        
-        Automovil a1 = new Automovil("Ford", 2018, 3, tipoCom.DIESEL, tipoA.EJECUTIVO, 5,6,250, tipoColor.NEGRO);
+        Automovil a1;
+        a1 = new Automovil("Ford", 2018, 3, tipoCom.DIESEL, tipoA.EJECUTIVO, 5, 6, 250, tipoColor.NEGRO);
 
         a1.imprimir();
 
