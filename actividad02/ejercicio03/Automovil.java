@@ -105,8 +105,8 @@ public class Automovil {
         if (velocidadActual - decremento >= 0) {
             velocidadActual -= decremento;
         } else {
-            System.out.println("\nNo se pudo decrementar" + decremento + "a " + velocidadActual);
-            System.out.println("debido a que la velocidad no puede ser negativa.\n");
+            System.out.println("\nNo se pudo decrementar " + decremento + " a " + velocidadActual);
+            System.out.println("Razón: La velocidad no puede ser negativa.\n");
         }
     }
 
