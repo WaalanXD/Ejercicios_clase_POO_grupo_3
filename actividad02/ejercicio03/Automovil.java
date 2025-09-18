@@ -4,27 +4,26 @@ public class Automovil {
     String marca;
     int modelo;
     int motor;
-    int puertas;
     tipoCom tipoCombustible;
     tipoA tipoAutomovil;
-    tipoColor color;
+    int puertas;
     int cantidadAsientos;
     int velocidadMaxima;
+    tipoColor color;
     int velocidadActual = 0;
 
 
-    public Automovil(String marca, int modelo, int motor, int puertas, tipoCom tipoCombustible, tipoA tipoAutomovil, tipoColor color, int cantidadAsientos, int velocidadMaxima) {
+    public Automovil(String marca,int modelo, int motor, tipoCom tipoCombustible, tipoA tipoAutomovil, int puertas, int cantidadAsientos, int velocidadMaxima, tipoColor color) {
+
         this.marca = marca;
         this.modelo = modelo;
         this.motor = motor;
-        this.puertas = puertas;
         this.tipoCombustible = tipoCombustible;
         this.tipoAutomovil = tipoAutomovil;
-        this.color = color;
-        this.tipoAutomovil = tipoAutomovil;
-        this.color = color;
+        this.puertas = puertas;
         this.cantidadAsientos = cantidadAsientos;
         this.velocidadMaxima = velocidadMaxima;
+        this.color = color;
 
     }
 
@@ -119,4 +118,26 @@ public class Automovil {
 
     }
 
+    int tiempoLlegada(int distancia) {
+        if (velocidadActual > 0) {
+            return distancia / velocidadActual;
+        } else {
+            System.out.println("\nEl automóvil está detenido. No se puede calcular el tiempo de llegada.\n");
+            return 0;
+        }
+    }
+
+
+    void imprimir() {
+        System.out.println("\nMarca: " + marca);
+        System.out.println("Modelo: " + modelo);
+        System.out.println("Motor: " + motor + " litros");
+        System.out.println("Tipo de Combustible: " + tipoCombustible);
+        System.out.println("Tipo de Automóvil: " + tipoAutomovil);
+        System.out.println("Número de puertas: " + puertas);
+        System.out.println("Cantidad de Asientos: " + cantidadAsientos);
+        System.out.println("Velocidad Máxima: " + velocidadMaxima + " km/h");
+        System.out.println("Velocidad Actual: " + velocidadActual + " km/h\n");
+        System.out.println("Color: " + color);
+    }   
 }
