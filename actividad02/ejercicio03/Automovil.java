@@ -13,7 +13,7 @@ public class Automovil {
     int velocidadActual = 0;
 
 
-    Automovil(String marca,int modelo, int motor, tipoCom tipoCombustible, tipoA tipoAutomovil, int puertas, int cantidadAsientos, int velocidadMaxima, tipoColor color) {
+     Automovil(String marca,int modelo, int motor, tipoCom tipoCombustible, tipoA tipoAutomovil, int puertas, int cantidadAsientos, int velocidadMaxima, tipoColor color) {
 
         this.marca = marca;
         this.modelo = modelo;
