@@ -1,3 +1,4 @@
+package actividad01;
 // Ejercicio Resuelto No 5
 
 import java.util.Scanner;

@@ -1,3 +1,4 @@
+package actividad01;
 import java.util.Scanner;
 
 // EJERCICIO PROPUESTO No 12

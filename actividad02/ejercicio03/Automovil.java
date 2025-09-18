@@ -88,7 +88,7 @@ public class Automovil {
         if (velocidadActual <= this.velocidadMaxima) {
             this.velocidadActual = velocidadActual;
         } else {
-            System.out.println("La velocidad actual no puede ser mayor que la velocidad máxima.");
+            System.out.println("\nLa velocidad actual no puede ser mayor que la velocidad máxima.\n");
         }
     }
 
@@ -97,7 +97,7 @@ public class Automovil {
         if (velocidadActual + incremento <= velocidadMaxima) {
             velocidadActual += incremento;
         } else {
-            System.out.println("No se puede incrementar a una velocidad superior a la máxima del automóvil.");
+            System.out.println("\nNo se puede incrementar a una velocidad superior a la máxima del automóvil.\n");
         }
     }
 
@@ -106,8 +106,15 @@ public class Automovil {
         if (velocidadActual - decremento >= 0) {
             velocidadActual -= decremento;
         } else {
-            System.out.println("No se puede decrementar a una velocidad negativa");
+            System.out.println("\nNo se puede decrementar a una velocidad negativa\n");
         }
     }
+
+    void frenar() {
+        if (velocidadActual > 0) {
+            velocidadActual = 0;
+        } else {
+            System.out.println("\nEl automóvil ya está detenido.\n");
+        }
 
 }
