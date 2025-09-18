@@ -23,6 +23,8 @@ public class ejercicio_5 {
 
         areaCirculo = Calculos.calcularArea(radio);
 
+        input.close();
+
         System.out.println("La longitud de la circunferencia es: " + longitudCircunferencia);
 
         System.out.println("El area del circulo es: " + areaCirculo);

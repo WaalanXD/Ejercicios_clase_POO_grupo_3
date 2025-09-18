@@ -63,6 +63,7 @@ public class ejercicio_4 {
 
         }
         
+        input.close();
         
     }
     

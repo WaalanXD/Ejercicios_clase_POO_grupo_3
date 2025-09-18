@@ -25,8 +25,6 @@ public class ejercicio_3 {
 
         salario_bruto = Calculos.calcularSalarioBruto(horas, valor_hora);
 
-
-
     
         porcentaje_retencion = Calculos.calcularPorcentajeRetencion(retencion);
 
@@ -35,7 +33,7 @@ public class ejercicio_3 {
 
         salario_neto = Calculos.calcularSalarioNeto(salario_bruto, retencion_fuente);
 
-
+        input.close();
         System.out.println("El salario bruto es: " + salario_bruto);
         System.out.println("la retencion a la fuente es: " + retencion_fuente);
         System.out.println("El salario neto es: " + salario_neto);
