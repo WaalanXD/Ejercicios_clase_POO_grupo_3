@@ -1,16 +1,16 @@
 package actividad02.ejercicio03;
 
 public class Automovil {
-    String marca;
-    int modelo;
-    int motor;
-    tipoCom tipoCombustible;
-    tipoA tipoAutomovil;
-    int puertas;
-    int cantidadAsientos;
-    int velocidadMaxima;
-    tipoColor color;
-    int velocidadActual = 0;
+    public String marca;
+    public int modelo;
+    public int motor;
+    public tipoCom tipoCombustible;
+    public tipoA tipoAutomovil;
+    public int puertas;
+    public int cantidadAsientos;
+    public int velocidadMaxima;
+    public tipoColor color;
+    public int velocidadActual = 0;
 
 
      Automovil(String marca,int modelo, int motor, tipoCom tipoCombustible, tipoA tipoAutomovil, int puertas, int cantidadAsientos, int velocidadMaxima, tipoColor color) {
