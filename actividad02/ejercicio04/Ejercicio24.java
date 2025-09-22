@@ -22,7 +22,7 @@ public class Ejercicio24 {
     System.out.println("El perimetro del rectangulo es: " + figura3.calcularPerimetro());
     System.out.println("-".repeat(50));
     System.out.println("El area del triangulo es: " + figura4.calcularArea());
-    System.out.println("La hipotenusa del triangulo es: " + figura4.calcularHipotenusa());
+    System.out.println("El perimetro del triangulo es: " + figura4.calcularPerimetro());
     System.out.println("El tipo de triangulo es: " + figura4.determinarTipoTriangulo());
 
 

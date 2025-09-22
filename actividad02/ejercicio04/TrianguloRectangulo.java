@@ -10,7 +10,8 @@ public class TrianguloRectangulo {
         this.altura = altura;
     }
     double calcularArea() {
-        return (base * altura) / 2.0;
+        return (base * altura) / 2;
+        //NOTA: (base * altura) / 2.0 seria mejor. Ejecucion imprecisa en el ejemplo del libro.
     }
 
     double calcularHipotenusa() {
