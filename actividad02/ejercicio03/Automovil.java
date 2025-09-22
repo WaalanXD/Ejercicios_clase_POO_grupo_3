@@ -126,8 +126,11 @@ public class Automovil {
             System.out.println("\nEl automovil está detenido. No se puede calcular el tiempo de llegada.\n");
             return 0;
         }
+    
+    
     }
 
+    
 
     void imprimir() {
         System.out.println("\nMarca: " + marca);

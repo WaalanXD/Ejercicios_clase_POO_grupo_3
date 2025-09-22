@@ -21,7 +21,6 @@ public class EjercicioN23 {
         System.out.println("Velocidad actual: " + a1.velocidadActual);
 
         a1.desacelerar(20);
-
         
         
     }
