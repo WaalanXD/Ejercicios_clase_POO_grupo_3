@@ -106,7 +106,7 @@ public class Automovil {
             velocidadActual -= decremento;
         } else {
             System.out.println("\nNo se pudo decrementar " + decremento + " km/h a " + velocidadActual + " km/h");
-            System.out.println("Razón: La velocidad no puede ser negativa.\n");
+            System.out.println("Razon: La velocidad no puede ser negativa.\n");
         }
     }
 
@@ -114,7 +114,7 @@ public class Automovil {
         if (velocidadActual > 0) {
             velocidadActual = 0;
         } else {
-            System.out.println("\nEl automóvil ya está detenido.\n");
+            System.out.println("\nEl automovil ya está detenido.\n");
         }
 
     }
@@ -123,7 +123,7 @@ public class Automovil {
         if (velocidadActual > 0) {
             return distancia / velocidadActual;
         } else {
-            System.out.println("\nEl automóvil está detenido. No se puede calcular el tiempo de llegada.\n");
+            System.out.println("\nEl automovil está detenido. No se puede calcular el tiempo de llegada.\n");
             return 0;
         }
     }

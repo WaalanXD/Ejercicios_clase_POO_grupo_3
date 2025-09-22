@@ -26,7 +26,7 @@ public class Planeta {
     void imprimir() {
         
         System.out.println("Nombre del planeta = " + nombre);
-    System.out.println("Cantidad de satélites = " + cantidadSatelites);
+    System.out.println("Cantidad de satelites = " + cantidadSatelites);
     System.out.println("Masa del planeta = " + masa);
     System.out.println("Volumen del planeta = " + volumen);
     System.out.println("Diámetro del planeta = " + diametro);
