@@ -4,16 +4,16 @@ public class Rectangulo {
     public int base;
     public int altura;
 
-    Rectangulo(int base, int altura) {
+    public Rectangulo(int base, int altura) {
         this.base = base;
         this.altura = altura;
     }
 
-    public int calcularArea() {
+    double calcularArea() {
         return base * altura;
     }
 
-    public int calcularPerimetro() {
+    double calcularPerimetro() {
         return 2 * (base + altura);
     }
 

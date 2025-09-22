@@ -5,16 +5,39 @@ public class TrianguloRectangulo {
     public int base;
     public int altura;
 
-    TrianguloRectangulo(int base, int altura) {
+    public TrianguloRectangulo(int base, int altura) {
         this.base = base;
         this.altura = altura;
     }
-    public double calcularArea() {
+    double calcularArea() {
         return (base * altura) / 2.0;
     }
 
-    public double calcularHipotenusa() {
-        return Math.hypot(base, altura);
+    double calcularHipotenusa() {
+        return Math.sqrt(Math.pow(base,2) + Math.pow(altura,2));
+    
     }
+
+    double calcularPerimetro() {
+        return calcularHipotenusa() + base + altura;
+
+    }
+
+    String determinarTipoTriangulo() {
+
+
+        if (base == altura && base == calcularHipotenusa()) {
+            return "Equilatero";
+        }   
+    
+        else if (base != altura && base != calcularHipotenusa() && altura != calcularHipotenusa()) {
+            return "Escaleno";
+        }
+
+        else {
+            return "Isoceles";
+        }
+
+}
 
 }
