@@ -1,6 +1,6 @@
 package actividad02.ejercicio05;
-
-public class ejercicio05 {
+// Ejercicio Resuelto No 5
+public class ejercicio25 {
 
     public static void main(String[] args) {
         
@@ -12,4 +12,7 @@ public class ejercicio05 {
         
     }
 }
+
+
+
 

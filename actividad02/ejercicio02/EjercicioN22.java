@@ -1,5 +1,5 @@
 package actividad02.ejercicio02;
-
+// Ejercicio Resuelto No 2.2
 public class EjercicioN22 {
     public static void main(String[] args) {
         
