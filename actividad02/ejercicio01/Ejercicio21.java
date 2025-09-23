@@ -1,6 +1,8 @@
 package actividad02.ejercicio01;
 import java.util.Scanner;
-public class MainEjercicio21 {
+
+// Ejercicio Resuelto No 2.1
+public class Ejercicio21 {
 //comentario: es un poco diferente al del libro porque estaba practicando arrays, perdon.
     public static void main(String[] args) {
 
