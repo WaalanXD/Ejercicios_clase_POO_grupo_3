@@ -1,4 +1,4 @@
-from tipo import Tipo
+from Tipo import Tipo
 
 class CuentaBancaria:
     def __init__(self, nombres_titular: str, apellidos_titular: str, numero_cuenta : str,
@@ -9,6 +9,10 @@ class CuentaBancaria:
         self.numero_cuenta = numero_cuenta
         self.tipo_cuenta = tipo_cuenta
         self.saldo = 0.0
+        
+        
+    def imprimir():
+        
         
         
         
