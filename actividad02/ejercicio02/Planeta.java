@@ -7,9 +7,9 @@ public class Planeta {
     double volumen = 0;
     int diametro = 0;
     int distanciaSol = 0;
+    tipoPlaneta tipo = null;    
     boolean esObservable = false;
-    tipoPlaneta tipo = null;
-    
+  
     
     public Planeta(String nombre, int cantidadSatelites, double masa, double volumen, int diametro, int distanciaSol, tipoPlaneta tipo, boolean esObservable) {
         
