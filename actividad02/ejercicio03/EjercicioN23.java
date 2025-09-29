@@ -22,7 +22,6 @@ public class EjercicioN23 {
 
         a1.desacelerar(20);
         
-        
     }
     
 }
