@@ -119,7 +119,7 @@ public class Automovil {
 
     }
 
-    int tiempoLlegada(int distancia) {
+    double tiempoLlegada(int distancia) {
         if (velocidadActual > 0) {
             return distancia / velocidadActual;
         } else {
