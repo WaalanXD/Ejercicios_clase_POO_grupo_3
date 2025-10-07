@@ -123,24 +123,29 @@ public class VentanaPrincipal extends JFrame implements ActionListener{
         if (evento.getSource() == calcular) {
 
             Notas notas = new Notas(); 
-            // Se obtiene y convierte el valor numérico de la nota 1
-            notas.listaNotas[0] = Double.parseDouble(campoNota1.
-            getText());
-            // Se obtiene y convierte el valor numérico de la nota 2
-            notas.listaNotas[1] = Double.parseDouble(campoNota2.
-            getText());
-            // Se obtiene y convierte el valor numérico de la nota 3
-            notas.listaNotas[2] = Double.parseDouble(campoNota3.
-            getText());
-            // Se obtiene y convierte el valor numérico de la nota 4
-            notas.listaNotas[3] = Double.parseDouble(campoNota4.
-            getText());
-            // Se obtiene y convierte el valor numérico de la nota 5
-            notas.listaNotas[4] = Double.parseDouble(campoNota5.
-            getText());
-            notas.calcularPromedio(); // Se calcula el promedio
-            notas.calcularDesviación(); // Se calcula la desviación
-                    }
+
+            notas.listaNotas[0] = Double.parseDouble(campoNota1.getText());
+
+
+            notas.listaNotas[1] = Double.parseDouble(campoNota2.getText());
+
+            notas.listaNotas[2] = Double.parseDouble(campoNota3.getText());
+
+            notas.listaNotas[3] = Double.parseDouble(campoNota4.getText());
+
+            notas.listaNotas[4] = Double.parseDouble(campoNota5.getText());
+            notas.calcularPromedio(); 
+            notas.calcularDesviacion(); 
+
+
+            promedio.setText("Promedio = " + String.valueOf(String.format("%.2f", notas.calcularPromedio())));
+            double desv = notas.calcularDesviacion();
+            desviación.setText("Desviación estándar = " + String.format("%.2f", desv));
+            mayor.setText("Valor mayor = " + String.valueOf(notas.calcularMayor()));
+            menor.setText("Valor menor = " + String.valueOf(notas.calcularMenor()));
+        }
+
+        
 
    }
 
