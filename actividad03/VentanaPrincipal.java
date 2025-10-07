@@ -94,30 +94,55 @@ public class VentanaPrincipal extends JFrame implements ActionListener{
         mayor.setText("Nota mayor = ");
         mayor.setBounds(20, 270, 120, 23);
 
-    menor = new JLabel();
-    menor.setText("Nota menor = ");
-    menor.setBounds(20, 300, 120, 23); 
+        menor = new JLabel();
+        menor.setText("Nota menor = ");
+        menor.setBounds(20, 300, 120, 23); 
 
-    contenedor.add(nota1);
-    contenedor.add(campoNota1);
-    contenedor.add(nota2);
-    contenedor.add(campoNota2);
-    contenedor.add(nota3);
-    contenedor.add(campoNota3);
-    contenedor.add(nota4);
-    contenedor.add(campoNota4);
-    contenedor.add(nota5);
-    contenedor.add(campoNota5);
-    contenedor.add(calcular);
-    contenedor.add(limpiar);
-    contenedor.add(promedio);
-    contenedor.add(desviación);
-    contenedor.add(mayor);
-    contenedor.add(menor);
+        contenedor.add(nota1);
+        contenedor.add(campoNota1);
+        contenedor.add(nota2);
+        contenedor.add(campoNota2);
+        contenedor.add(nota3);
+        contenedor.add(campoNota3);
+        contenedor.add(nota4);
+        contenedor.add(campoNota4);
+        contenedor.add(nota5);
+        contenedor.add(campoNota5);
+        contenedor.add(calcular);
+        contenedor.add(limpiar);
+        contenedor.add(promedio);
+        contenedor.add(desviación);
+        contenedor.add(mayor);
+        contenedor.add(menor);
 
     }
 
+    @Override
+    public void actionPerformed(ActionEvent evento) {
 
-    
+        if (evento.getSource() == calcular) {
+
+            Notas notas = new Notas(); 
+            // Se obtiene y convierte el valor numérico de la nota 1
+            notas.listaNotas[0] = Double.parseDouble(campoNota1.
+            getText());
+            // Se obtiene y convierte el valor numérico de la nota 2
+            notas.listaNotas[1] = Double.parseDouble(campoNota2.
+            getText());
+            // Se obtiene y convierte el valor numérico de la nota 3
+            notas.listaNotas[2] = Double.parseDouble(campoNota3.
+            getText());
+            // Se obtiene y convierte el valor numérico de la nota 4
+            notas.listaNotas[3] = Double.parseDouble(campoNota4.
+            getText());
+            // Se obtiene y convierte el valor numérico de la nota 5
+            notas.listaNotas[4] = Double.parseDouble(campoNota5.
+            getText());
+            notas.calcularPromedio(); // Se calcula el promedio
+            notas.calcularDesviación(); // Se calcula la desviación
+                    }
+
    }
+
+}
 
