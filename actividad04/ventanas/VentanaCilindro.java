@@ -31,7 +31,10 @@ public class VentanaCilindro extends Jframe implements ActionListener {
 
         contenedor = getContentPane();
         contenedor = setLayout(null);
-        
+
+        base = new JLabel();
+
+        base.setText("Base (cms)");
 
     }
 }
