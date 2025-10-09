@@ -4,4 +4,6 @@ import actividad04.ventanas.*;
 
 public class EjercicioN83 {
     
+    VentanaPrincipal miVentanaPrincipal;
+    
 }

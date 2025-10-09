@@ -29,24 +29,40 @@ public class VentanaPrincipal extends Jframe implements ActionListener {
         cilindro.setBounds(20, 50, 80, 23);
         cilindro.addActionListener(this);
         esfera = new JButton();
-        esfera.setText(“Esfera”);
+        esfera.setText("Esfera");
         esfera.setBounds(125, 50, 80, 23); 
         esfera.addActionListener(this);
 
-        pirámide = new JButton();
-        pirámide.setText(“Pirámide”);
-        pirámide.setBounds(225, 50, 100, 23); 
-        pirámide.addActionListener(this);
+        piramide = new JButton();
+        piramide.setText("Pirámide");
+        piramide.setBounds(225, 50, 100, 23); 
+        piramide.addActionListener(this);
 
         contenedor.add(cilindro);
         contenedor.add(esfera);
-        contenedor.add(pirámide);
-}
+        contenedor.add(piramide);
+
+        }
+
+    
+    public void actionPerformed(ActionEvent evento) {
+        if (evento.getSource() == esfera) { 
+        VentanaEsfera esfera = new VentanaEsfera(); 
+        esfera.setVisible(true); 
+        }
+        if (evento.getSource() == cilindro) { 
+        VentanaCilindro cilindro = new VentanaCilindro(); 
+        cilindro.setVisible(true); 
+
+}       if (evento.getSource() == pirámide) {
+        VentanaPirámide pirámide = new VentanaPirámide(); 
+        pirámide.setVisible(true);
+
     }
 
-
+}
 
 
 
     
-}
+
