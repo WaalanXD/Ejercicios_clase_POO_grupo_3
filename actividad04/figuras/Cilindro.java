@@ -2,8 +2,8 @@ package actividad04.figuras;
 
 public class Cilindro extends FiguraGeometrica {
 
-    private radio;
-    private altura;
+    private double radio;
+    private double altura;
 
 
     public Cilindro(double radio, double altura) {
@@ -28,9 +28,9 @@ public class Cilindro extends FiguraGeometrica {
     public double calcularSuperficie() {
 
 
-    double áreaLadoA = 2.0 * Math.PI * radio * altura;
-    double áreaLadoB = 2.0 * Math.PI * Math.pow(radio, 2.0);
-    return áreaLadoA + áreaLadoB;
+    double areaLadoA = 2.0 * Math.PI * radio * altura;
+    double areaLadoB = 2.0 * Math.PI * Math.pow(radio, 2.0);
+    return areaLadoA + areaLadoB;
 
     
     }
