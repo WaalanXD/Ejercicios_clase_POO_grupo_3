@@ -1,5 +1,4 @@
-package actividad04;
-
+package actividad04.figuras;
 
 public class Piramide extends FiguraGeometrica {
     
