@@ -9,5 +9,7 @@ public class EjercicioN82Notas {
         formulario.setResizable(false);
         formulario.setVisible(true);
 
+        
+
     }
 }

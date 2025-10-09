@@ -145,7 +145,16 @@ public class VentanaPrincipal extends JFrame implements ActionListener{
             menor.setText("Valor menor = " + String.valueOf(notas.calcularMenor()));
         }
 
-        
+        if (evento.getSource() == limpiar) {
+
+            campoNota1.setText("");
+            campoNota2.setText("");
+            campoNota3.setText("");
+            campoNota4.setText("");
+            campoNota5.setText("");
+
+
+        }
 
    }
 
