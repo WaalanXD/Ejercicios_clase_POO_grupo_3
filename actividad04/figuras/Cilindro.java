@@ -22,7 +22,7 @@ public class Cilindro extends FiguraGeometrica {
 
         double volumen = Math.PI * altura * Math.pow(radio, 2);
 
-
+        return volumen;
     }
 
     public double calcularSuperficie() {
