@@ -8,7 +8,7 @@ import java.awt.event.ActionListener;
 
 
 
-public class VentanaCilindro extends Jframe implements ActionListener {
+public class VentanaCilindro extends JFrame implements ActionListener {
     
     private Container contenedor;
 
@@ -104,3 +104,4 @@ public class VentanaCilindro extends Jframe implements ActionListener {
         }
     }
 
+}

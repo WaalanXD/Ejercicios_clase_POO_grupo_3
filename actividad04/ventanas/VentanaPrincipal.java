@@ -1,14 +1,11 @@
 package actividad04.ventanas;
-import actividad04.figuras.*;
-import actividad04.figuras.*;
-import javax.swing.*;
 import java.awt.*;
-import java.awt.event.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import javax.swing.*;
 
 
-public class VentanaPrincipal extends Jframe implements ActionListener {
+public class VentanaPrincipal extends JFrame implements ActionListener {
 
     private Container contenedor;
 
@@ -54,9 +51,9 @@ public class VentanaPrincipal extends Jframe implements ActionListener {
         VentanaCilindro cilindro = new VentanaCilindro(); 
         cilindro.setVisible(true); 
 
-}       if (evento.getSource() == pirámide) {
-        VentanaPirámide pirámide = new VentanaPirámide(); 
-        pirámide.setVisible(true);
+}       if (evento.getSource() == piramide) {
+        VentanaPiramide piramide = new VentanaPiramide(); 
+        piramide.setVisible(true);
 
     }
 
@@ -64,5 +61,9 @@ public class VentanaPrincipal extends Jframe implements ActionListener {
 
 
 
+
+
+
     
 
+}
