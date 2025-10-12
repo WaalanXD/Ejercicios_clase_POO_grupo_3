@@ -25,17 +25,19 @@ public class VentanaPrincipal extends JFrame implements ActionListener {
 
         contenedor = getContentPane(); 
         contenedor.setLayout(null); 
+
         cilindro = new JButton();
         cilindro.setText("Cilindro");
         cilindro.setBounds(20, 50, 80, 23);
         cilindro.addActionListener(this);
+
         esfera = new JButton();
         esfera.setText("Esfera");
         esfera.setBounds(125, 50, 80, 23); 
         esfera.addActionListener(this);
 
         piramide = new JButton();
-        piramide.setText("Pirámide");
+        piramide.setText("Piramide");
         piramide.setBounds(225, 50, 100, 23); 
         piramide.addActionListener(this);
 

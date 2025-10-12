@@ -43,6 +43,13 @@ public class VentanaPiramide extends JFrame implements ActionListener {
         altura.setText("Altura (cms):");
         altura.setBounds(20, 50, 135, 23);
 
+        campoAltura = new JTextField();
+        campoAltura.setBounds(120, 50, 135, 23);
+
+        apotema = new JLabel();
+        apotema.setText("Apotema (cms):");
+        apotema.setBounds(20, 80, 135, 23);
+
         campoApotema = new JTextField();
         campoApotema.setBounds(120, 80, 135, 23);
 
@@ -79,6 +86,7 @@ public class VentanaPiramide extends JFrame implements ActionListener {
         double base = 0;
         double altura = 0;
         double apotema = 0;
+
 
         try {
             base = Double.parseDouble(campoBase.getText());
