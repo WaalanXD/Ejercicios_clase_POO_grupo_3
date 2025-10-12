@@ -14,6 +14,10 @@ public class VentanaPrincipal extends JFrame implements ActionListener {
     public VentanaPrincipal() {
 
         inicio();
+        setTitle("Figuras");
+        setSize(350,160);
+        setLocationRelativeTo(null);
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
     }
 
