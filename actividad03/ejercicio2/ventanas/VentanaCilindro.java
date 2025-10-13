@@ -1,5 +1,5 @@
-package actividad04.ventanas;
-import actividad04.figuras.*;
+package actividad03.ejercicio2.ventanas;
+import actividad03.ejercicio2.figuras.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;

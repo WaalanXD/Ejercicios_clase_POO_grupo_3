@@ -1,6 +1,6 @@
-package actividad04.main;
+package actividad03.ejercicio2.main;
 
-import actividad04.ventanas.*;
+import actividad03.ejercicio2.ventanas.*;
 
 public class EjercicioN83 {
 

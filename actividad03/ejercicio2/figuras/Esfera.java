@@ -1,4 +1,4 @@
-package actividad04.figuras;
+package actividad03.ejercicio2.figuras;
 
 public class Esfera extends FiguraGeometrica {
     

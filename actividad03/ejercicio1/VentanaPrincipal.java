@@ -1,6 +1,6 @@
 
 
-package actividad03;
+package actividad03.ejercicio1;
 
 import java.awt.*;
 import java.awt.event.ActionEvent;

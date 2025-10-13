@@ -1,4 +1,4 @@
-package actividad03;
+package actividad03.ejercicio1;
 
 public class EjercicioN82Notas {
 
