@@ -47,7 +47,7 @@ public class VentanaPrincipal extends JFrame implements ActionListener {
 
         }
 
-    
+    @Override
     public void actionPerformed(ActionEvent evento) {
         if (evento.getSource() == esfera) { 
         VentanaEsfera esfera = new VentanaEsfera(); 
