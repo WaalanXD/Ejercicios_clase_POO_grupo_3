@@ -1,4 +1,4 @@
-package actividad04.ejercicio01;
+package actividad04.ejercicio03;
 
 public class EjercicioP412 {
     public static void main(String[] args) {
