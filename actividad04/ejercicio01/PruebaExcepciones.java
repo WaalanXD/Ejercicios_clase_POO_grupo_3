@@ -7,4 +7,9 @@ public class PruebaExcepciones {
         return numerador / denominador;
 
     }
+    //Metodo ObtenerMensaje pendiente (implementación despues de vod)
+    public static String ObtenerMensaje(String mensaje) {
+        return mensaje;
+
+    }
 }

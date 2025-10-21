@@ -15,6 +15,7 @@ public class VentanaPrincipal extends JFrame implements ActionListener {
     private JButton limpiarButton;
     private JLabel resultadoLabel;
     private JLabel errorLabel;
+    private JLabel mensajeLabel;
 
     public VentanaPrincipal() {
 
@@ -72,10 +73,14 @@ public class VentanaPrincipal extends JFrame implements ActionListener {
     public void actionPerformed(ActionEvent e) {
         double denominador;
         double numerador;
+        String mensaje;
+
         if (e.getSource() == calcularButton) {
             try {
                 denominador = Double.parseDouble(denominadorField.getText());
                 numerador = Double.parseDouble(numeradorField.getText());
+                
+                
                 if (denominador == 0) {
                     throw new IllegalArgumentException("División por cero no permitida.");
                 }
@@ -92,7 +97,7 @@ public class VentanaPrincipal extends JFrame implements ActionListener {
                 return;
             }
 
-            resultadoLabel.setText("Resultado: " + (numerador / denominador));
+            resultadoLabel.setText("Resultado: " + PruebaExcepciones.calcularDivision(numerador, denominador));
             errorLabel.setForeground(Color.GREEN);
             errorLabel.setText("Division realizada con éxito.");
         }
