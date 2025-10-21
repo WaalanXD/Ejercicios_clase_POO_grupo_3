@@ -12,3 +12,5 @@ public class EjercicioP400 {
         miVentanaPrincipal.setResizable(false);
     
 }
+
+}

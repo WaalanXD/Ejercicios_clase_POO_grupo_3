@@ -20,10 +20,11 @@ public class VentanaPrincipal extends JFrame implements ActionListener {
 
         inicio();
         setTitle("Calculadora de División");
-        setSize(400, 250);
+        setSize(400, 300);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setVisible(true);
         setResizable(false);
+        setLocationRelativeTo(null);
 
     }
 
@@ -69,31 +70,43 @@ public class VentanaPrincipal extends JFrame implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
+        double denominador;
+        double numerador;
         if (e.getSource() == calcularButton) {
             try {
-                double numerador = Double.parseDouble(numeradorField.getText());
-                double denominador = Double.parseDouble(denominadorField.getText());
-
-                double resultado = PruebaExcepciones.calcularDivision(numerador, denominador);
-
-                resultadoLabel.setText("Resultado: " + resultado);
-                errorLabel.setForeground(Color.GREEN);
-                errorLabel.setText("Division realizada con éxito.");
+                denominador = Double.parseDouble(denominadorField.getText());
+                numerador = Double.parseDouble(numeradorField.getText());
+                if (denominador == 0) {
+                    throw new IllegalArgumentException("División por cero no permitida.");
+                }
 
             } catch (NumberFormatException ex) {
-                errorLabel.setText("Error: Entrada no válida. Por favor ingrese números.");
-                resultadoLabel.setText("Resultado: ");
-            } catch (ArithmeticException ex) {
-                errorLabel.setText("Error: División por cero no permitida.");
-                resultadoLabel.setText("Resultado: ");
+
+                errorLabel.setForeground(Color.RED);
+                errorLabel.setText("Error: Ingrese números válidos.");
+                return;
+
+            } catch (IllegalArgumentException ex) {
+                errorLabel.setForeground(Color.RED);
+                errorLabel.setText("Error: " + ex.getMessage());
+                return;
             }
-        } else if (e.getSource() == limpiarButton) {
+
+            resultadoLabel.setText("Resultado: " + (numerador / denominador));
+            errorLabel.setForeground(Color.GREEN);
+            errorLabel.setText("Division realizada con éxito.");
+        }
+
+        else if (e.getSource() == limpiarButton) {
             numeradorField.setText("");
             denominadorField.setText("");
             resultadoLabel.setText("Resultado: ");
             errorLabel.setText("");
         }
-    
-}
+        
 
+
+       
+
+    }
 }
