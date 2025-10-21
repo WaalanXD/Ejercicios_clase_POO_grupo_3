@@ -1,11 +1,8 @@
-package actividad03.ejercicio2.main;
+package actividad04.ejercicio01;
 
-import actividad03.ejercicio2.ventanas.*;
-
-public class EjercicioN83 {
-
+public class EjercicioP412 {
     public static void main(String[] args) {
-        
+
         VentanaPrincipal miVentanaPrincipal;
 
         miVentanaPrincipal = new VentanaPrincipal();
@@ -15,10 +12,7 @@ public class EjercicioN83 {
         miVentanaPrincipal.setResizable(false);
 
 
+
+
     }
-    
-
-
-
-    
 }
