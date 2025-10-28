@@ -7,7 +7,7 @@ public class PruebaExcepciones {
         return numerador / denominador;
 
     }
-    //Metodo ObtenerMensaje pendiente (implementación despues de vod)
+    //Metodo ObtenerMensaje pendiente (implementación despues de vod Martes 23 de octubre)
     public static String ObtenerMensaje(String mensaje) {
         return mensaje;
 
