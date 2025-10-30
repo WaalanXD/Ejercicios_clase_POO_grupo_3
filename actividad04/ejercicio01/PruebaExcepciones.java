@@ -9,7 +9,11 @@ public class PruebaExcepciones {
     }
     //Metodo ObtenerMensaje pendiente (implementación despues de vod Martes 23 de octubre)
     public static String ObtenerMensaje(String mensaje) {
-        return mensaje;
+        if (mensaje.isEmpty() == false) {
+            return mensaje;
+            
+        } 
 
+        return "texto vacío";
     }
 }

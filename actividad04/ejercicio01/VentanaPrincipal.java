@@ -16,16 +16,17 @@ public class VentanaPrincipal extends JFrame implements ActionListener {
     private JLabel resultadoLabel;
     private JLabel errorLabel;
     private JLabel mensajeLabel;
+    private JTextField mensajeField;
+    private JLabel resultadoMensaje;
 
     public VentanaPrincipal() {
 
         inicio();
         setTitle("Calculadora de División");
-        setSize(400, 300);
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        setVisible(true);
-        setResizable(false);
+        setSize(400, 350);
         setLocationRelativeTo(null);
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setResizable(false);
 
     }
 
@@ -67,6 +68,18 @@ public class VentanaPrincipal extends JFrame implements ActionListener {
         errorLabel = new JLabel("");
         errorLabel.setBounds(50, 190, 300, 25);
         contenedor.add(errorLabel);
+
+        mensajeLabel = new JLabel("Mensaje:");
+        mensajeLabel.setBounds(50, 220, 100, 25);
+        contenedor.add(mensajeLabel);
+
+        mensajeField = new JTextField();
+        mensajeField.setBounds(150, 220, 150, 25);
+        contenedor.add(mensajeField);
+
+        resultadoMensaje = new JLabel("");
+        resultadoMensaje.setBounds(50, 250, 300, 25);
+        contenedor.add(resultadoMensaje);
     }
 
     @Override
@@ -79,7 +92,10 @@ public class VentanaPrincipal extends JFrame implements ActionListener {
             try {
                 denominador = Double.parseDouble(denominadorField.getText());
                 numerador = Double.parseDouble(numeradorField.getText());
-                
+                mensaje = mensajeField.getText();
+                resultadoMensaje.setText(PruebaExcepciones.ObtenerMensaje(mensaje));
+
+                 
                 
                 if (denominador == 0) {
                     throw new IllegalArgumentException("División por cero no permitida.");
@@ -95,6 +111,9 @@ public class VentanaPrincipal extends JFrame implements ActionListener {
                 errorLabel.setForeground(Color.RED);
                 errorLabel.setText("Error: " + ex.getMessage());
                 return;
+            } catch (Exception ex) {
+                resultadoMensaje.setText("Error: " + ex.getMessage());
+                return;
             }
 
             resultadoLabel.setText("Resultado: " + PruebaExcepciones.calcularDivision(numerador, denominador));
@@ -107,6 +126,8 @@ public class VentanaPrincipal extends JFrame implements ActionListener {
             denominadorField.setText("");
             resultadoLabel.setText("Resultado: ");
             errorLabel.setText("");
+            mensajeField.setText("");
+            resultadoMensaje.setText("");
         }
         
 
