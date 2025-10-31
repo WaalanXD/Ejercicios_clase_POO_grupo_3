@@ -93,7 +93,7 @@ public class VentanaPrincipal extends JFrame implements ActionListener {
                 denominador = Double.parseDouble(denominadorField.getText());
                 numerador = Double.parseDouble(numeradorField.getText());
                 mensaje = mensajeField.getText();
-                resultadoMensaje.setText(PruebaExcepciones.ObtenerMensaje(mensaje));
+                
 
                  
                 
@@ -105,17 +105,21 @@ public class VentanaPrincipal extends JFrame implements ActionListener {
 
                 errorLabel.setForeground(Color.RED);
                 errorLabel.setText("Error: Ingrese números válidos.");
+                resultadoLabel.setText("Resultado: ");
+                
                 return;
 
             } catch (IllegalArgumentException ex) {
                 errorLabel.setForeground(Color.RED);
                 errorLabel.setText("Error: " + ex.getMessage());
+                resultadoLabel.setText("Resultado: ");
                 return;
             } catch (Exception ex) {
                 resultadoMensaje.setText("Error: " + ex.getMessage());
                 return;
             }
 
+            resultadoMensaje.setText("Mensaje: " + PruebaExcepciones.ObtenerMensaje(mensaje));
             resultadoLabel.setText("Resultado: " + PruebaExcepciones.calcularDivision(numerador, denominador));
             errorLabel.setForeground(Color.GREEN);
             errorLabel.setText("Division realizada con éxito.");
