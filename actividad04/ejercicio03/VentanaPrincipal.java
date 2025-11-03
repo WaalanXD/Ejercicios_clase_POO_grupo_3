@@ -51,7 +51,6 @@ public class VentanaPrincipal extends JFrame implements ActionListener {
 
         labelError = new JLabel("");
         labelError.setBounds(20, 180, 350, 23);
-        labelError.setForeground(Color.RED);
         contenedor.add(labelError);
     
     }
@@ -60,25 +59,29 @@ public class VentanaPrincipal extends JFrame implements ActionListener {
     public void actionPerformed(ActionEvent e) {
         
         if (e.getSource() == calcular) {
-            double numero;
-        
             try {
-                numero = Double.parseDouble(campoNumero.getText());
-          
-                if (numero <= 0) {
-                    throw new IllegalArgumentException("Error: Ingrese un número positivo.");
-                }
-            } catch (NumberFormatException ex) {
-                labelError.setText("Error: Ingrese un número válido.");
-                return;
-            } catch (IllegalArgumentException ex) {
-                labelError.setText(ex.getMessage());
-                return;
-            }
 
-            labelLogaritmo.setText("Logaritmo Neperiano: " + CalculosNumericos.calcularLogaritmoNeperiano(numero));
-            labelRaiz.setText("Raíz Cuadrada: " + CalculosNumericos.calcularRaizCuadrada(numero));
-            labelError.setText("");
+                double numero = Double.parseDouble(campoNumero.getText());
+
+                double log = CalculosNumericos.calcularLogaritmoNeperiano(numero);
+                double raiz = CalculosNumericos.calcularRaizCuadrada(numero);
+
+                labelLogaritmo.setText("Logaritmo Neperiano: " + log);
+                labelRaiz.setText("Raíz Cuadrada: " + raiz);
+                labelError.setForeground(Color.GREEN);
+                labelError.setText("Cálculos realizados correctamente.");
+            } catch (NumberFormatException ex) {
+
+                labelError.setForeground(Color.RED);
+                labelError.setText("Error: Ingrese un número válido.");
+                labelLogaritmo.setText("Logaritmo Neperiano: ");
+                labelRaiz.setText("Raíz Cuadrada: ");
+            } catch (IllegalArgumentException ex) {
+                labelError.setForeground(Color.RED);
+                labelError.setText(ex.getMessage());
+                labelLogaritmo.setText("Logaritmo Neperiano: ");
+                labelRaiz.setText("Raíz Cuadrada: ");
+            }
 
         } else if (e.getSource() == limpiar) {
             campoNumero.setText("");

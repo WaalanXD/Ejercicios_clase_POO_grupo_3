@@ -35,7 +35,7 @@ Ejercicio 3:
 
 Ejercicio 4:
 
-- Codigo fuente
++ Codigo fuente
 - Diagrama de clases
 - Capturas de pantalla de la ejecucion del programa
 - UML Caso de uso
