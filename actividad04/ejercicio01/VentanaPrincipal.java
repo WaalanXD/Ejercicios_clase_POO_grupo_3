@@ -84,45 +84,30 @@ public class VentanaPrincipal extends JFrame implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        double denominador;
-        double numerador;
-        String mensaje;
-
         if (e.getSource() == calcularButton) {
             try {
-                denominador = Double.parseDouble(denominadorField.getText());
-                numerador = Double.parseDouble(numeradorField.getText());
-                mensaje = mensajeField.getText();
-                
+                double denominador = Double.parseDouble(denominadorField.getText());
+                double numerador = Double.parseDouble(numeradorField.getText());
+                String mensaje = mensajeField.getText();
 
-                 
-                
-                if (denominador == 0) {
-                    throw new IllegalArgumentException("División por cero no permitida.");
-                }
+                double resultado = PruebaExcepciones.calcularDivision(numerador, denominador);
+                String msg = PruebaExcepciones.ObtenerMensaje(mensaje);
 
+                resultadoLabel.setText("Resultado: " + resultado);
+                resultadoMensaje.setText("Mensaje: " + msg);
+                errorLabel.setForeground(Color.GREEN);
+                errorLabel.setText("Division realizada con éxito.");
             } catch (NumberFormatException ex) {
-
                 errorLabel.setForeground(Color.RED);
                 errorLabel.setText("Error: Ingrese números válidos.");
                 resultadoLabel.setText("Resultado: ");
-                
-                return;
-
+                resultadoMensaje.setText("");
             } catch (IllegalArgumentException ex) {
                 errorLabel.setForeground(Color.RED);
                 errorLabel.setText("Error: " + ex.getMessage());
                 resultadoLabel.setText("Resultado: ");
-                return;
-            } catch (Exception ex) {
-                resultadoMensaje.setText("Error: " + ex.getMessage());
-                return;
+                resultadoMensaje.setText("");
             }
-
-            resultadoMensaje.setText("Mensaje: " + PruebaExcepciones.ObtenerMensaje(mensaje));
-            resultadoLabel.setText("Resultado: " + PruebaExcepciones.calcularDivision(numerador, denominador));
-            errorLabel.setForeground(Color.GREEN);
-            errorLabel.setText("Division realizada con éxito.");
         }
 
         else if (e.getSource() == limpiarButton) {
