@@ -179,10 +179,12 @@ public class VentanaPrincipal extends JFrame implements ActionListener {
         }
 
         } catch (Exception ex) {
+            ex.printStackTrace();
             mensajeLabel.setForeground(Color.RED);
             mensajeLabel.setText("Error: " + ex.getMessage());
             
         }
+        
 
       
     }

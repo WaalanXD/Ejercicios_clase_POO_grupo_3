@@ -11,6 +11,8 @@ public class VentanaPrincipal extends JFrame implements ActionListener {
     private JButton botonCargar;
     private JTextArea areaTexto;
     private JScrollPane scrollPane;
+    private JButton limpiarButton;
+    private JLabel mensajeLabel;
 
     public VentanaPrincipal() {
         inicio();
@@ -30,30 +32,44 @@ public class VentanaPrincipal extends JFrame implements ActionListener {
         botonCargar.addActionListener(this);
         contenedor.add(botonCargar);
 
+        limpiarButton = new JButton("Limpiar");
+        limpiarButton.setBounds(330, 20, 140, 30);
+        limpiarButton.addActionListener(this);
+        contenedor.add(limpiarButton);
+
         areaTexto = new JTextArea();
         areaTexto.setEditable(false);
+        contenedor.add(areaTexto);
         scrollPane = new JScrollPane(areaTexto);
         scrollPane.setBounds(20, 70, 450, 280);
         contenedor.add(scrollPane);
+
+        mensajeLabel = new JLabel("");
+        mensajeLabel.setBounds(20, 360, 450, 25);
+        contenedor.add(mensajeLabel);
+
     }
 
     @Override
     public void actionPerformed(ActionEvent e) {
+
+        try {
         if (e.getSource() == botonCargar) {
-            JFileChooser selectorArchivo = new JFileChooser();
-            int resultado = selectorArchivo.showOpenDialog(this);
-            if (resultado == JFileChooser.APPROVE_OPTION) {
-                String rutaArchivo = selectorArchivo.getSelectedFile().getAbsolutePath();
-                LeerArchivo lector = new LeerArchivo();
-                String contenido = lector.LeerArchivoTexto(rutaArchivo);
-                areaTexto.setText(contenido);
-            }
+            LeerArchivo lector = new LeerArchivo();
+            String contenido = lector.LeerArchivo();
+            areaTexto.setText(contenido);
+            mensajeLabel.setForeground(Color.GREEN);
+            mensajeLabel.setText("Archivo cargado correctamente.");
+        } else if (e.getSource() == limpiarButton) {
+            areaTexto.setText("");
         }
+    } catch (Exception ex) {
+        mensajeLabel.setForeground(Color.RED);
+        mensajeLabel.setText("Error al cargar el archivo: " + ex.getMessage());
     }
 
 
-
-
-
-    
 }
+
+}
+
