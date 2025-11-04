@@ -12,12 +12,12 @@ public class VentanaPrincipal extends JFrame implements ActionListener {
     private JTextArea areaTexto;
     private JScrollPane scrollPane;
     private JButton limpiarButton;
-    private JLabel mensajeLabel;
+    private JTextArea mensajeArea;
 
     public VentanaPrincipal() {
         inicio();
         setTitle("Contenido del Archivo de Texto");
-        setSize(500, 400);
+        setSize(500, 450);
         setLocationRelativeTo(null);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setResizable(false);
@@ -28,12 +28,12 @@ public class VentanaPrincipal extends JFrame implements ActionListener {
         contenedor.setLayout(null);
 
         botonCargar = new JButton("Cargar Archivo");
-        botonCargar.setBounds(180, 20, 140, 30);
+        botonCargar.setBounds(20, 20, 140, 30);
         botonCargar.addActionListener(this);
         contenedor.add(botonCargar);
 
         limpiarButton = new JButton("Limpiar");
-        limpiarButton.setBounds(330, 20, 140, 30);
+        limpiarButton.setBounds(180, 20, 100, 30);
         limpiarButton.addActionListener(this);
         contenedor.add(limpiarButton);
 
@@ -44,9 +44,13 @@ public class VentanaPrincipal extends JFrame implements ActionListener {
         scrollPane.setBounds(20, 70, 450, 280);
         contenedor.add(scrollPane);
 
-        mensajeLabel = new JLabel("");
-        mensajeLabel.setBounds(20, 360, 450, 25);
-        contenedor.add(mensajeLabel);
+    mensajeArea = new JTextArea("");
+    mensajeArea.setEditable(false);
+    mensajeArea.setLineWrap(true);
+    mensajeArea.setWrapStyleWord(true);
+    mensajeArea.setOpaque(false); 
+    mensajeArea.setBounds(20, 360, 450, 60);
+    contenedor.add(mensajeArea);
 
     }
 
@@ -58,14 +62,18 @@ public class VentanaPrincipal extends JFrame implements ActionListener {
             LeerArchivo lector = new LeerArchivo();
             String contenido = lector.LeerArchivo();
             areaTexto.setText(contenido);
-            mensajeLabel.setForeground(Color.GREEN);
-            mensajeLabel.setText("Archivo cargado correctamente.");
+            mensajeArea.setForeground(Color.GREEN);
+            mensajeArea.setText("Archivo cargado correctamente.");
         } else if (e.getSource() == limpiarButton) {
             areaTexto.setText("");
+            mensajeArea.setText("");
         }
     } catch (Exception ex) {
-        mensajeLabel.setForeground(Color.RED);
-        mensajeLabel.setText("Error al cargar el archivo: " + ex.getMessage());
+        mensajeArea.setForeground(Color.RED);
+
+        mensajeArea.setText(ex.getMessage());
+        ex.printStackTrace();
+
     }
 
 
