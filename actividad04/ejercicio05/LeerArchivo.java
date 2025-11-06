@@ -10,7 +10,7 @@ public class LeerArchivo {
     private String línea;
     private String contenido = "";
 
-    public String LeerArchivo() {
+    public String verArchivo() {
 
         try {
             if (nombreArchivo.isEmpty()) {

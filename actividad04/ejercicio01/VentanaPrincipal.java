@@ -86,12 +86,11 @@ public class VentanaPrincipal extends JFrame implements ActionListener {
     public void actionPerformed(ActionEvent e) {
         if (e.getSource() == calcularButton) {
             try {
-                double denominador = Double.parseDouble(denominadorField.getText());
                 double numerador = Double.parseDouble(numeradorField.getText());
-                String mensaje = mensajeField.getText();
+                double denominador = Double.parseDouble(denominadorField.getText());
 
                 double resultado = PruebaExcepciones.calcularDivision(numerador, denominador);
-                String msg = PruebaExcepciones.ObtenerMensaje(mensaje);
+                String msg = PruebaExcepciones.ObtenerMensaje(mensajeField.getText());
 
                 resultadoLabel.setText("Resultado: " + resultado);
                 resultadoMensaje.setText("Mensaje: " + msg);
@@ -101,12 +100,18 @@ public class VentanaPrincipal extends JFrame implements ActionListener {
                 errorLabel.setForeground(Color.RED);
                 errorLabel.setText("Error: Ingrese números válidos.");
                 resultadoLabel.setText("Resultado: ");
-                resultadoMensaje.setText("");
+    
+                String msg = PruebaExcepciones.ObtenerMensaje(mensajeField.getText());
+                resultadoMensaje.setText("Mensaje: " + msg);
+                
             } catch (IllegalArgumentException ex) {
                 errorLabel.setForeground(Color.RED);
                 errorLabel.setText("Error: " + ex.getMessage());
                 resultadoLabel.setText("Resultado: ");
-                resultadoMensaje.setText("");
+                
+                String msg = PruebaExcepciones.ObtenerMensaje(mensajeField.getText());
+                resultadoMensaje.setText("Mensaje: " + msg);
+                
             }
         }
 

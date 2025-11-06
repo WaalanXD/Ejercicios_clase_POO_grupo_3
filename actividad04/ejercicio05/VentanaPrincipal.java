@@ -60,7 +60,7 @@ public class VentanaPrincipal extends JFrame implements ActionListener {
         try {
         if (e.getSource() == botonCargar) {
             LeerArchivo lector = new LeerArchivo();
-            String contenido = lector.LeerArchivo();
+            String contenido = lector.verArchivo();
             areaTexto.setText(contenido);
             mensajeArea.setForeground(Color.GREEN);
             mensajeArea.setText("Archivo cargado correctamente.");
