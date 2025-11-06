@@ -75,8 +75,8 @@ public class VentanaPrincipal extends JFrame implements ActionListener {
             try {
             String nombre = campoNombre.getText();
             Long telefono = Long.parseLong(campoTelefono.getText());
-                AgregarAmigo agregarAmigo = new AgregarAmigo();
-                agregarAmigo.agregarAmigo(nombre, telefono);
+            Amigos grupo = new Amigos();
+            grupo.agregarAmigo(nombre, telefono);
 
 
             } catch (Exception ex) {

@@ -6,7 +6,7 @@ import javax.swing.JOptionPane;
 
 
 
-public class AgregarAmigo  {
+public class Amigos  {
     
     File archivo = new File("C:\\Users\\kenny\\Downloads\\Programación\\Java Progrmación Conceptos\\repositorio GitHub\\Ejercicios_clase_POO_grupo_3\\actividad05\\amigos.txt");
     String nombreNumeroString;
@@ -45,6 +45,23 @@ public class AgregarAmigo  {
 
     }
 
+    public void EliminarAmigo(String delNombre, Long delTelefono) {
+        // Método para eliminar un amigo (por implementar)
+
+    
+    }
+
+    public void ActualizarAmigo(String actNombre, Long actTelefono) {
+        // Método para actualizar un amigo (por implementar)
+
+    
+    }
+
+    public void LeerAmigo() {
+        // Método para leer amigos (por implementar)
+
     
     }
     
+
+}
