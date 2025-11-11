@@ -10,8 +10,8 @@ public class Amigos  {
     
     File archivo = new File("C:\\Users\\kenny\\Downloads\\Programación\\Java Progrmación Conceptos\\repositorio GitHub\\Ejercicios_clase_POO_grupo_3\\actividad05\\amigos.txt");
     String nombreNumeroString;
-    String nombre; //
-    Long telefono; //
+    String nombre; 
+    Long telefono; 
 
     public void validacionArchivo() {
         try {
@@ -72,26 +72,35 @@ public class Amigos  {
         try {
 
             validacionArchivo();
+            boolean buscar = false;
+
+
+
             RandomAccessFile raf = new RandomAccessFile(archivo, "r");
 
             StringBuilder amigosList = new StringBuilder();
 
             while (raf.getFilePointer() < raf.length()) {
                 nombreNumeroString = raf.readLine();
-                amigosList.append(nombreNumeroString).append("\n");
+                String[] partes = nombreNumeroString.split("!");
+                amigosList.append("Nombre: ").append(partes[0]).append(", Teléfono: ").append(partes[1]).append("\n");
+
             }
 
             JOptionPane.showMessageDialog(null, amigosList.toString());
             raf.close();
 
+            if (!buscar) {
+                JOptionPane.showMessageDialog(null, "No se encontraron amigos con esos datos.");
+            }
 
 
         } catch (IOException e) {
             e.printStackTrace();
 
-    
+        }
+
     }
     
 
-}
 }
