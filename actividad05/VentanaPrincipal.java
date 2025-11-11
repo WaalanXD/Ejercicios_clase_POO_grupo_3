@@ -78,6 +78,7 @@ public class VentanaPrincipal extends JFrame implements ActionListener {
             Amigos grupo = new Amigos();
             grupo.agregarAmigo(nombre, telefono);
 
+           
 
             } catch (Exception ex) {
                 JOptionPane.showMessageDialog(this, "Error al agregar amigo: " + ex.getMessage());
