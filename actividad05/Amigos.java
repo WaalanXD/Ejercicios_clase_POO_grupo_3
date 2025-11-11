@@ -13,11 +13,19 @@ public class Amigos  {
     String nombre; //
     Long telefono; //
 
-    public void agregarAmigo(String newNombre, Long newTelefono) {
+    public void validacionArchivo() {
         try {
             if (!archivo.exists()) {
                 archivo.createNewFile();
             }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void agregarAmigo(String newNombre, Long newTelefono) {
+        try {
+            validacionArchivo();
             RandomAccessFile raf = new RandomAccessFile(archivo, "rw");
             boolean buscar = false;
 
@@ -58,10 +66,32 @@ public class Amigos  {
     }
 
     public void LeerAmigo() {
+        
         // Método para leer amigos (por implementar)
+
+        try {
+
+            validacionArchivo();
+            RandomAccessFile raf = new RandomAccessFile(archivo, "r");
+
+            StringBuilder amigosList = new StringBuilder();
+
+            while (raf.getFilePointer() < raf.length()) {
+                nombreNumeroString = raf.readLine();
+                amigosList.append(nombreNumeroString).append("\n");
+            }
+
+            JOptionPane.showMessageDialog(null, amigosList.toString());
+            raf.close();
+
+
+
+        } catch (IOException e) {
+            e.printStackTrace();
 
     
     }
     
 
+}
 }

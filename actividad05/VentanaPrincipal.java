@@ -83,9 +83,43 @@ public class VentanaPrincipal extends JFrame implements ActionListener {
                 JOptionPane.showMessageDialog(this, "Error al agregar amigo: " + ex.getMessage());
             }
 
+        } else if (e.getSource() == botonEliminar) {
+            try {
+                String nombre = campoNombre.getText();
+                Long telefono = Long.parseLong(campoTelefono.getText());
+                Amigos grupo = new Amigos();
+                grupo.EliminarAmigo(nombre, telefono);
 
-        }
+
+            } catch (Exception ex) {
+                JOptionPane.showMessageDialog(this, "Error al eliminar amigo: " + ex.getMessage());
+            }
+        } else if (e.getSource() == botonActualizar) {
+            try {
+                String nombre = campoNombre.getText();
+                Long telefono = Long.parseLong(campoTelefono.getText());
+                Amigos grupo = new Amigos();
+                grupo.ActualizarAmigo(nombre, telefono);
+
+            } catch (Exception ex) {
+                JOptionPane.showMessageDialog(this, "Error al actualizar amigo: " + ex.getMessage());
     }
 
-}        
-            
+
+            } else if (e.getSource() == botonLeer) {
+                
+            try {
+                Amigos grupo = new Amigos();
+                grupo.LeerAmigo();
+
+            } catch (Exception ex) {
+                JOptionPane.showMessageDialog(this, "Error al leer amigos: " + ex.getMessage());
+            }
+        } else if (e.getSource() == botonLimpiar) {
+            campoNombre.setText("");
+            campoTelefono.setText("");
+        }
+    
+}
+
+}
