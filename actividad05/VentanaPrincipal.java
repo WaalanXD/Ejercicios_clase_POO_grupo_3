@@ -107,10 +107,11 @@ public class VentanaPrincipal extends JFrame implements ActionListener {
 
 
             } else if (e.getSource() == botonLeer) {
-                
+
             try {
+                String nombre = campoNombre.getText();
                 Amigos grupo = new Amigos();
-                grupo.LeerAmigo();
+                grupo.LeerAmigo(nombre);
 
             } catch (Exception ex) {
                 JOptionPane.showMessageDialog(this, "Error al leer amigos: " + ex.getMessage());

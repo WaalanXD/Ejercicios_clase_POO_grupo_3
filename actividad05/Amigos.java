@@ -37,6 +37,7 @@ public class Amigos  {
 
                 if (nombre.equalsIgnoreCase(newNombre) || telefono.equals(newTelefono)) {
                     buscar = true;
+                    JOptionPane.showMessageDialog(null, "El amigo ya existe.");
                     break;
                 }
             }
@@ -65,35 +66,34 @@ public class Amigos  {
     
     }
 
-    public void LeerAmigo() {
+    public void LeerAmigo(String nombreBuscado) {
         
-        // Método para leer amigos (por implementar)
+        // Método para leer amigo seleccioando por nombre
 
         try {
 
             validacionArchivo();
-            boolean buscar = false;
-
-
-
             RandomAccessFile raf = new RandomAccessFile(archivo, "r");
-
-            StringBuilder amigosList = new StringBuilder();
+            boolean encontrado = false;
 
             while (raf.getFilePointer() < raf.length()) {
                 nombreNumeroString = raf.readLine();
                 String[] partes = nombreNumeroString.split("!");
-                amigosList.append("Nombre: ").append(partes[0]).append(", Teléfono: ").append(partes[1]).append("\n");
+                nombre = partes[0];
+                telefono = Long.parseLong(partes[1]);
 
+                if (nombre.equalsIgnoreCase(nombreBuscado)) {
+                    JOptionPane.showMessageDialog(null, "Amigo encontrado: " + nombre + " - " + telefono);
+                    encontrado = true;
+                    break;
+                }
             }
 
-            JOptionPane.showMessageDialog(null, amigosList.toString());
+            if (!encontrado) {
+                JOptionPane.showMessageDialog(null, "Amigo no encontrado.");
+            }
+
             raf.close();
-
-            if (!buscar) {
-                JOptionPane.showMessageDialog(null, "No se encontraron amigos con esos datos.");
-            }
-
 
         } catch (IOException e) {
             e.printStackTrace();
@@ -101,6 +101,4 @@ public class Amigos  {
         }
 
     }
-    
-
 }
