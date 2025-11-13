@@ -73,10 +73,29 @@ public class VentanaPrincipal extends JFrame implements ActionListener {
         if (e.getSource() == botonAgregar) {
 
             try {
-            String nombre = campoNombre.getText();
-            Long telefono = Long.parseLong(campoTelefono.getText());
+            String nombreStr = campoNombre.getText().trim();
+            String telTexto = campoTelefono.getText().trim();
+
+            if (nombreStr.isEmpty()) {
+                JOptionPane.showMessageDialog(this, "El campo Nombre no puede estar vacío.");
+                campoNombre.requestFocus();
+                return;
+            }
+
+            if (telTexto.isEmpty()) {
+                JOptionPane.showMessageDialog(this, "El campo Teléfono no puede estar vacío.");
+                campoTelefono.requestFocus();
+                return;
+            }
+
+            if (!telTexto.matches("\\d+")) {
+                JOptionPane.showMessageDialog(this, "El campo Teléfono debe contener solo números.");
+                campoTelefono.requestFocus();
+                return;
+            }
+
             Amigos grupo = new Amigos();
-            grupo.agregarAmigo(nombre, telefono);
+            grupo.agregarAmigo(nombreStr, Long.parseLong(telTexto));
 
            
 
@@ -86,10 +105,17 @@ public class VentanaPrincipal extends JFrame implements ActionListener {
 
         } else if (e.getSource() == botonEliminar) {
             try {
-                String nombre = campoNombre.getText();
-                Long telefono = Long.parseLong(campoTelefono.getText());
+                String nombreStr = campoNombre.getText().trim();
+
+                if (nombreStr.isEmpty()) {
+                    JOptionPane.showMessageDialog(this, "El campo Nombre no puede estar vacío.");
+                    campoNombre.requestFocus();
+                    return;
+                }
+
+                
                 Amigos grupo = new Amigos();
-                grupo.EliminarAmigo(nombre, telefono);
+                grupo.EliminarAmigo(nombreStr, 0L);
 
 
             } catch (Exception ex) {
@@ -97,10 +123,27 @@ public class VentanaPrincipal extends JFrame implements ActionListener {
             }
         } else if (e.getSource() == botonActualizar) {
             try {
-                String nombre = campoNombre.getText();
-                Long telefono = Long.parseLong(campoTelefono.getText());
+                String nombreStr = campoNombre.getText().trim();
+                String telTexto = campoTelefono.getText().trim();
+
+                if (nombreStr.isEmpty()) {
+                    JOptionPane.showMessageDialog(this, "El campo Nombre no puede estar vacío.");
+                    campoNombre.requestFocus();
+                    return;
+                }
+                if (telTexto.isEmpty()) {
+                    JOptionPane.showMessageDialog(this, "El campo Teléfono no puede estar vacío.");
+                    campoTelefono.requestFocus();
+                    return;
+                }
+                if (!telTexto.matches("\\d+")) {
+                    JOptionPane.showMessageDialog(this, "El campo Teléfono debe contener solo números.");
+                    campoTelefono.requestFocus();
+                    return;
+                }
+
                 Amigos grupo = new Amigos();
-                grupo.ActualizarAmigo(nombre, telefono);
+                grupo.ActualizarAmigo(nombreStr, Long.parseLong(telTexto));
 
             } catch (Exception ex) {
                 JOptionPane.showMessageDialog(this, "Error al actualizar amigo: " + ex.getMessage());
@@ -110,9 +153,15 @@ public class VentanaPrincipal extends JFrame implements ActionListener {
             } else if (e.getSource() == botonLeer) {
 
             try {
-                String nombre = campoNombre.getText();
+                String nombreStr = campoNombre.getText().trim();
+
+                if (nombreStr.isEmpty()) {
+                    JOptionPane.showMessageDialog(this, "El campo Nombre no puede estar vacío.");
+                    campoNombre.requestFocus();
+                    return;
+                }
                 Amigos grupo = new Amigos();
-                grupo.LeerAmigo(nombre);
+                grupo.LeerAmigo(nombreStr);
 
             } catch (Exception ex) {
                 JOptionPane.showMessageDialog(this, "Error al leer amigos: " + ex.getMessage());

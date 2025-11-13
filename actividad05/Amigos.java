@@ -28,10 +28,6 @@ public class Amigos  {
             validacionArchivo();
 
             
-
-    
-
-            //Comprobar que newnombre no sea un numero y que newtelefono sea un numero
             if (newNombre.matches("\\d+")) {
                 throw new IllegalArgumentException("El nombre no puede ser un número.");
             }
