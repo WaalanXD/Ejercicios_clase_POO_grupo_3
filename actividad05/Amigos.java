@@ -123,6 +123,78 @@ public class Amigos  {
             e.printStackTrace();
             JOptionPane.showMessageDialog(null, "Error al eliminar.");
         }
+
+
+    /* 
+    
+    public void eliminarAmigo(String delNombre) {
+        try {
+            validacionArchivo();
+            RandomAccessFile raf = new RandomAccessFile(archivo, "rw");
+            boolean encontrado = false;
+            
+            String line;
+            String name;
+            long number;
+
+            while (raf.getFilePointer() < raf.length()) {
+                line = raf.readLine();
+                String[] parts = line.split("!");
+                if (parts.length < 2) continue;
+                name = parts[0];
+                number = Long.parseLong(parts[1]);
+                if (delNombre != null && !delNombre.isBlank() && name.equalsIgnoreCase(delNombre)) {
+                    encontrado = true;
+                    break;
+                }
+            }
+            if (!encontrado) {
+                raf.close();
+                JOptionPane.showMessageDialog(null, "Amigo no encontrado.");
+                return;
+            }
+            File tmpFile = new File("temp_delete.txt");
+            RandomAccessFile tmpraf = new RandomAccessFile(tmpFile, "rw");
+            raf.seek(0);
+            while (raf.getFilePointer() < raf.length()) {
+                line = raf.readLine();
+                if (line == null || line.isBlank()) continue;
+                int idx = line.indexOf('!');
+                if (idx == -1) continue;
+                name = line.substring(0, idx);
+                try {
+                    number = Long.parseLong(line.substring(idx + 1));
+                } catch (NumberFormatException nfe) {
+                    continue;
+                }
+    if ((delNombre != null && !delNombre.isBlank() && name.equalsIgnoreCase(delNombre))) {
+                    continue;
+                }
+                tmpraf.writeBytes(line);
+                tmpraf.writeBytes(System.lineSeparator());
+            }
+            raf.seek(0);
+            tmpraf.seek(0);
+            while (tmpraf.getFilePointer() < tmpraf.length()) {
+                raf.writeBytes(tmpraf.readLine());
+                raf.writeBytes(System.lineSeparator());
+            }
+            raf.setLength(tmpraf.length());
+            tmpraf.close();
+            raf.close();
+            tmpFile.delete();
+            JOptionPane.showMessageDialog(null, "Amigo eliminado correctamente.");
+        } catch (IOException e) {
+            e.printStackTrace();
+            JOptionPane.showMessageDialog(null, "Error al eliminar.");
+        }
+    }
+    
+    
+    
+    */
+
+
     }
 
     public void actualizarAmigo(String actNombre, String actTelefono) {
