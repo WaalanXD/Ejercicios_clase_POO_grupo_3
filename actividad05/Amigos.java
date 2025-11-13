@@ -23,9 +23,10 @@ public class Amigos  {
         }
     }
 
-    public void agregarAmigo(String newNombre, Long newTelefono) {
+    public void agregarAmigo(String newNombre, String telTexto) {
         try {
             validacionArchivo();
+            Long newTelefono = Long.parseLong(telTexto);
 
             
             if (newNombre.matches("\\d+")) {
@@ -69,7 +70,7 @@ public class Amigos  {
 
     }
 
-    public void EliminarAmigo(String delNombre, Long delTelefono) {
+    public void EliminarAmigo(String delNombre, String delTelefono) {
 
         //Solo con el nombre 
        
@@ -77,6 +78,7 @@ public class Amigos  {
             validacionArchivo();
             RandomAccessFile raf = new RandomAccessFile(archivo, "rw");
             boolean encontrado = false;
+            Long delTelefonoLong = Long.parseLong(delTelefono);
 
             while (raf.getFilePointer() < raf.length()) {
                 nombreNumeroString = raf.readLine();
@@ -119,7 +121,17 @@ public class Amigos  {
         }
     }
 
-    public void ActualizarAmigo(String actNombre, Long actTelefono) {
+    public void ActualizarAmigo(String actNombre, String actTelefono) {
+
+        try {
+            validacionArchivo();
+            RandomAccessFile raf = new RandomAccessFile(archivo, "rw");
+        
+            boolean encontrado = false;
+            Long actTelefonoLong = Long.parseLong(actTelefono);
+            
+        } catch (Exception e) {
+        }
         // Método para actualizar un amigo (por implementar)
 
     }

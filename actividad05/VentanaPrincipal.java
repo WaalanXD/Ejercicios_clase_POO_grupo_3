@@ -95,7 +95,7 @@ public class VentanaPrincipal extends JFrame implements ActionListener {
             }
 
             Amigos grupo = new Amigos();
-            grupo.agregarAmigo(nombreStr, Long.parseLong(telTexto));
+            grupo.agregarAmigo(nombreStr, telTexto);
 
            
 
@@ -143,7 +143,7 @@ public class VentanaPrincipal extends JFrame implements ActionListener {
                 }
 
                 Amigos grupo = new Amigos();
-                grupo.ActualizarAmigo(nombreStr, Long.parseLong(telTexto));
+                grupo.ActualizarAmigo(nombreStr, telTexto);
 
             } catch (Exception ex) {
                 JOptionPane.showMessageDialog(this, "Error al actualizar amigo: " + ex.getMessage());
