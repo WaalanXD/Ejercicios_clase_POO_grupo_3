@@ -106,6 +106,7 @@ public class VentanaPrincipal extends JFrame implements ActionListener {
         } else if (e.getSource() == botonEliminar) {
             try {
                 String nombreStr = campoNombre.getText().trim();
+                String telTexto = campoTelefono.getText().trim();
 
                 if (nombreStr.isEmpty()) {
                     JOptionPane.showMessageDialog(this, "El campo Nombre no puede estar vacío.");
@@ -115,7 +116,7 @@ public class VentanaPrincipal extends JFrame implements ActionListener {
 
                 
                 Amigos grupo = new Amigos();
-                grupo.EliminarAmigo(nombreStr, 0L);
+                grupo.eliminarAmigo(nombreStr, telTexto);
 
 
             } catch (Exception ex) {
@@ -143,7 +144,7 @@ public class VentanaPrincipal extends JFrame implements ActionListener {
                 }
 
                 Amigos grupo = new Amigos();
-                grupo.ActualizarAmigo(nombreStr, telTexto);
+                grupo.actualizarAmigo(nombreStr, telTexto);
 
             } catch (Exception ex) {
                 JOptionPane.showMessageDialog(this, "Error al actualizar amigo: " + ex.getMessage());
@@ -161,7 +162,7 @@ public class VentanaPrincipal extends JFrame implements ActionListener {
                     return;
                 }
                 Amigos grupo = new Amigos();
-                grupo.LeerAmigo(nombreStr);
+                grupo.leerAmigo(nombreStr);
 
             } catch (Exception ex) {
                 JOptionPane.showMessageDialog(this, "Error al leer amigos: " + ex.getMessage());
