@@ -69,7 +69,6 @@ public class VentanaPrincipal extends JFrame implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        // Manejar eventos de botones aquí
         if (e.getSource() == botonAgregar) {
 
             try {
