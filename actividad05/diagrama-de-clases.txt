@@ -1,0 +1,54 @@
+@startuml
+' Diagrama de clases actividad05 en formato PlantUML
+
+class Amigos {
+  - File archivo
+  - String nombreNumeroString
+  - String nombre
+  - Long telefono
+  + void validacionArchivo()
+  + void agregarAmigo(String newNombre, String telTexto)
+  + void eliminarAmigo(String delNombre, String delTelefono)
+  + void actualizarAmigo(String actNombre, String actTelefono)
+  + void leerAmigo(String nombreBuscado)
+}
+
+class VentanaPrincipal {
+  + VentanaPrincipal()
+  - JButton botonAgregar
+  - JButton botonEliminar
+  - JButton botonActualizar
+  - JButton botonLeer
+  - JButton botonLimpiar
+  - Container contenedor
+  - JLabel nombre
+  - JLabel telefono
+  - JTextField campoNombre
+  - JTextField campoTelefono
+  - void inicio()
+  + void actionPerformed(ActionEvent e)
+}
+
+class Main {
+  + void main(String[] args)
+}
+
+VentanaPrincipal ..> Amigos : usa
+Main ..> VentanaPrincipal : crea
+
+VentanaPrincipal --|> JFrame
+VentanaPrincipal ..|> ActionListener
+
+note right of Amigos
+  Gestiona persistencia simple en archivo texto (amigos.txt)
+end note
+
+note bottom of VentanaPrincipal
+  Interfaz gráfica que orquesta operaciones sobre Amigos
+end note
+
+note right of Main
+  Inicializa la ventana principal
+end note
+
+@enduml
