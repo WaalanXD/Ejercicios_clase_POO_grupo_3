@@ -20,7 +20,7 @@ public class VentanaAgregarEmpleado extends JFrame implements ActionListener {
     private SpinnerNumberModel modeloSpinner;
     private ButtonGroup grupoGenero;
     private JRadioButton masculino, femenino;
-    private JButton agregar, limpiar, verNomina;
+    private JButton agregar, limpiar;
 
     public VentanaAgregarEmpleado(ListaEmpleados lista) {
         this.lista = lista;
@@ -48,11 +48,9 @@ public class VentanaAgregarEmpleado extends JFrame implements ActionListener {
         cargo = new JLabel("Cargo:");
         cargo.setBounds(20, 80, 100, 23);
         campoCargo = new JComboBox<>();
-        campoCargo.addItem("Gerente");
-        campoCargo.addItem("Supervisor");
-        campoCargo.addItem("Operario");
-        campoCargo.addItem("Administrativo");
-        campoCargo.addItem("Otro");
+        campoCargo.addItem("Directivo");
+        campoCargo.addItem("Estratégico");
+        campoCargo.addItem("Operativo");
         campoCargo.setBounds(160, 80, 160, 23);
 
         genero = new JLabel("Género:");
@@ -102,9 +100,6 @@ public class VentanaAgregarEmpleado extends JFrame implements ActionListener {
         limpiar.setBounds(130, 320, 100, 23);
         limpiar.addActionListener(this);
 
-        verNomina = new JButton("Ver nómina");
-        verNomina.setBounds(240, 320, 100, 23);
-        verNomina.addActionListener(this);
 
         contenedor.add(nombre);
         contenedor.add(campoNombre);
@@ -127,7 +122,6 @@ public class VentanaAgregarEmpleado extends JFrame implements ActionListener {
         contenedor.add(campoPensiones);
         contenedor.add(agregar);
         contenedor.add(limpiar);
-        contenedor.add(verNomina);
     }
 
     private void limpiarCampos() {
@@ -147,8 +141,6 @@ public class VentanaAgregarEmpleado extends JFrame implements ActionListener {
             añadirEmpleado();
         } else if (src == limpiar) {
             limpiarCampos();
-        } else if (src == verNomina) {
-            new VentanaNomina(lista).setVisible(true);
         }
     }
 
@@ -164,16 +156,12 @@ public class VentanaAgregarEmpleado extends JFrame implements ActionListener {
 
             String seleccionado = (String) campoCargo.getSelectedItem();
             tipoCargo cargoSel;
-            if ("Gerente".equals(seleccionado)) {
-                cargoSel = tipoCargo.GERENTE;
-            } else if ("Supervisor".equals(seleccionado)) {
-                cargoSel = tipoCargo.SUPERVISOR;
-            } else if ("Operario".equals(seleccionado)) {
-                cargoSel = tipoCargo.OPERARIO;
-            } else if ("Administrativo".equals(seleccionado)) {
-                cargoSel = tipoCargo.ADMINISTRATIVO;
+            if ("Directivo".equals(seleccionado)) {
+                cargoSel = tipoCargo.DIRECTIVO;
+            } else if ("Estratégico".equals(seleccionado)) {
+                cargoSel = tipoCargo.ESTRATEGICO;
             } else {
-                cargoSel = tipoCargo.OTRO;
+                cargoSel = tipoCargo.OPERATIVO;
             }
 
             tipoGenero generoSel = masculino.isSelected() ? tipoGenero.MASCULINO : tipoGenero.FEMENINO;

@@ -1,0 +1,9 @@
+Nombre = Manuel
+Apellidos = Perez
+Sueldo = 525,00
+
+Nombre = Ana
+Apellidos = Diaz
+Sueldo = 1037,00
+
+Total nómina = 1562,00

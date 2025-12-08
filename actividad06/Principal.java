@@ -6,8 +6,8 @@ package actividad06;
 public class Principal {
     public static void main(String[] args) {
         ListaEmpleados lista = new ListaEmpleados();
-        VentanaAgregarEmpleado ventana = new VentanaAgregarEmpleado(lista);
-        ventana.setVisible(true);
-        ventana.setResizable(false);
+        VentanaPrincipal miVentanaPrincipal = new VentanaPrincipal(lista);
+        miVentanaPrincipal.setVisible(true);
+        miVentanaPrincipal.setResizable(false);
     }
 }

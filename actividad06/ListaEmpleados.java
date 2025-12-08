@@ -2,6 +2,7 @@ package actividad06;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Collections;
 
 public class ListaEmpleados {
     private final List<Empleado> empleados;
@@ -34,5 +35,9 @@ public class ListaEmpleados {
             total += e.calcularNómina();
         }
         return total;
+    }
+
+    public List<Empleado> obtenerLista() {
+        return Collections.unmodifiableList(empleados);
     }
 }
