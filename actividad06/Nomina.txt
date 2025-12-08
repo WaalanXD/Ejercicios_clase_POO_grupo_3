@@ -1,9 +1,12 @@
-Nombre = Manuel
-Apellidos = Perez
-Sueldo = 525,00
+Nombre = e
+Apellidos = e
+Cargo = DIRECTIVO
+Género = MASCULINO
+Salario = $3,0
+Días trabajados = 30
+Otros ingresos = $3,0
+Pagos salud = $3,0
+Aportes pensiones = $3,0
+---------
 
-Nombre = Ana
-Apellidos = Diaz
-Sueldo = 1037,00
-
-Total nómina = 1562,00
+Total nómina = $87,00

@@ -1,8 +1,8 @@
 package actividad06;
 
 import java.util.ArrayList;
-import java.util.List;
 import java.util.Collections;
+import java.util.List;
 
 public class ListaEmpleados {
     private final List<Empleado> empleados;
