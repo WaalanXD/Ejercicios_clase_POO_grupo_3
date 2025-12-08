@@ -1,4 +1,4 @@
-package actividad06;
+package actividad06.ejercicio01;
 
 /**
  * Punto de entrada al programa de nómina de empleados.

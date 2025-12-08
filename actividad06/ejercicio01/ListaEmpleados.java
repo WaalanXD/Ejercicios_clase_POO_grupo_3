@@ -1,4 +1,4 @@
-package actividad06;
+package actividad06.ejercicio01;
 
 import java.util.ArrayList;
 import java.util.Collections;

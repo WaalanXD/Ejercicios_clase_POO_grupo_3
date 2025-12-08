@@ -1,4 +1,4 @@
-package actividad06;
+package actividad06.ejercicio01;
 
 import java.awt.*;
 import java.awt.event.*;
