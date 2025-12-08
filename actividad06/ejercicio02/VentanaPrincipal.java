@@ -2,8 +2,6 @@ package ejercicio02;
 
 import java.awt.event.*;
 import javax.swing.*;
-
-/** Ventana principal del hotel con el menú de opciones. */
 public class VentanaPrincipal extends JFrame implements ActionListener {
 
     private Hotel hotel;

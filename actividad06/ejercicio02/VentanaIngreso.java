@@ -7,7 +7,6 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import javax.swing.*;
 
-/** Ventana de ingreso de huésped. */
 public class VentanaIngreso extends JFrame implements ActionListener {
 
     private Hotel hotel;

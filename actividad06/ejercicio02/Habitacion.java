@@ -1,6 +1,5 @@
 package ejercicio02;
 
-/** Modelo de habitación del hotel. */
 public class Habitacion {
 
     private int numeroHabitacion;

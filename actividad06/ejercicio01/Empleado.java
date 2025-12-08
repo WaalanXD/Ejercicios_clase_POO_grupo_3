@@ -25,7 +25,6 @@ public Empleado(String nombre, String apellidos, double salarioDía, double otro
     this.genero = genero;
 }
 
-//getters y setters
 public String getNombre() {
     return nombre;
 }

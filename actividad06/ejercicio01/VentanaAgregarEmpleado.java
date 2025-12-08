@@ -4,9 +4,6 @@ import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
 
-/**
- * Ventana para ingresar un empleado a la lista.
- */
 public class VentanaAgregarEmpleado extends JFrame implements ActionListener {
     private Container contenedor;
     private final ListaEmpleados lista;

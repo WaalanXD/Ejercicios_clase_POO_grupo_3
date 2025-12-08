@@ -7,7 +7,6 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import javax.swing.*;
 
-/** Ventana que permite registrar la salida del huésped y cálculo del pago. */
 public class VentanaSalida extends JFrame implements ActionListener {
 
     private Hotel hotel;
@@ -53,7 +52,6 @@ public class VentanaSalida extends JFrame implements ActionListener {
         c.gridy = 2; c.gridwidth = 1;
         contenedor.add(fechaSalida, c);
 
-        // Campo un poco más ancho para escribir la fecha
         campoFechaSalida = new JTextField(12);
         c.gridx = 1;
         contenedor.add(campoFechaSalida, c);

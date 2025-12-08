@@ -1,6 +1,5 @@
 package ejercicio02;
 
-/** Modelo de huésped del hotel. */
 public class Huesped {
 
     private String nombre;
@@ -47,6 +46,6 @@ public class Huesped {
         if (fechaIngreso == null || fechaSalida == null) {
             return 0;
         }
-        return 0; // El cálculo real se realiza en VentanaSalida usando Date
+        return 0;
     }
 }

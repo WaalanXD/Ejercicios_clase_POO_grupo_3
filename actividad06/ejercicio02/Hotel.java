@@ -1,10 +1,6 @@
 package ejercicio02;
 
 import java.util.ArrayList;
-
-/**
- * Clase Hotel que administra un conjunto fijo de habitaciones.
- */
 public class Hotel {
 
 	ArrayList<Habitacion> listaHabitaciones;
@@ -12,7 +8,7 @@ public class Hotel {
 	public Hotel() {
 		listaHabitaciones = new ArrayList<>();
 		for (int i = 1; i <= 10; i++) {
-			Habitacion h = new Habitacion(i, true, 1200000); // precio por día
+			Habitacion h = new Habitacion(i, true, 120000);
 			listaHabitaciones.add(h);
 		}
 	}

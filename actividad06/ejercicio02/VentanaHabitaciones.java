@@ -4,7 +4,6 @@ import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
 
-/** Ventana que muestra las habitaciones y permite seleccionar una. */
 public class VentanaHabitaciones extends JFrame implements ActionListener {
 
     private Hotel hotel;

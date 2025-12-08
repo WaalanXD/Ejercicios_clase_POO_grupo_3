@@ -7,9 +7,6 @@ import java.io.FileWriter;
 import java.io.PrintWriter;
 import javax.swing.*;
 
-/**
- * Ventana principal con menú para agregar empleados, ver nómina y guardar archivo.
- */
 public class VentanaPrincipal extends JFrame implements ActionListener {
     private final ListaEmpleados lista;
     private JMenuBar barraMenu;

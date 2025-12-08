@@ -4,9 +4,6 @@ import java.awt.*;
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
 
-/**
- * Ventana para consultar la lista de empleados y la nómina.
- */
 public class VentanaNomina extends JFrame {
     private Container contenedor;
     private final ListaEmpleados lista;
